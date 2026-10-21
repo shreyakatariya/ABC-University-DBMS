@@ -937,64 +937,7 @@ function App() {
                     ))}
                   </section>
 
-                  <section className="insight-grid">
-                    <article className="panel welcome-panel">
-                      <div className="welcome-panel-content">
-                        <div className="panel-eyebrow">YOUR UNIVERSITY AT A GLANCE</div>
-                        <h2>Every connection<br />tells a story.</h2>
-                        <p>
-                          Explore the relationships between students, courses and
-                          faculty in your university's academic network.
-                        </p>
-                        <button
-                            className="primary-button"
-                            onClick={() => setActivePage('Students')}
-                        >
-                          Explore students <ArrowUpRight size={17} />
-                        </button>
-                      </div>
-                      <div className="orb orb-one" />
-                      <div className="orb orb-two" />
-                      <div className="network-art" aria-hidden="true">
-                        <span className="network-line line-one" />
-                        <span className="network-line line-two" />
-                        <span className="network-line line-three" />
-                        <span className="network-node node-one"><Users size={18} /></span>
-                        <span className="network-node node-two"><BookOpen size={18} /></span>
-                        <span className="network-node node-three"><GraduationCap size={18} /></span>
-                        <span className="network-node node-four"><Activity size={16} /></span>
-                      </div>
-                    </article>
 
-                    <article className="panel quick-panel">
-                      <div className="panel-heading">
-                        <div>
-                          <h3>Quick navigation</h3>
-                          <p>Go directly to a section</p>
-                        </div>
-                      </div>
-                      {navigation.slice(1).map(({ label, icon: Icon }, index) => (
-                          <button
-                              key={label}
-                              className="quick-link"
-                              onClick={() => setActivePage(label)}
-                          >
-                            <div className={`quick-icon quick-${index}`}>
-                              <Icon size={19} />
-                            </div>
-                            <div className="quick-copy">
-                              <strong>{label}</strong>
-                              <span>
-                          {label === 'Students' && `${dashboard?.students ?? 0} records`}
-                                {label === 'Courses' && `${dashboard?.courses ?? 0} courses`}
-                                {label === 'Faculty' && `${dashboard?.faculty ?? 0} members`}
-                        </span>
-                            </div>
-                            <ArrowUpRight size={17} className="quick-arrow" />
-                          </button>
-                      ))}
-                    </article>
-                  </section>
 
                   <section className="panel records-panel performance-report-panel">
                     <div className="records-heading">
