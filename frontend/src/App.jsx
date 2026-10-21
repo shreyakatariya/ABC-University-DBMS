@@ -19,7 +19,9 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-const API = 'http://localhost:5000/api';
+const API = import.meta.env.DEV
+    ? 'http://localhost:5000/api'
+    : '/api';
 
 const navigation = [
   { label: 'Dashboard', icon: LayoutDashboard },
